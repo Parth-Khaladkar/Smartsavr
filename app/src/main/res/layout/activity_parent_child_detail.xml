@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ParentChildDetailActivity">
+
+    <TextView
+        android:id="@+id/child_name"
+        android:textColor="@color/black"
+        android:layout_gravity="start"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        tools:text="Child Name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/profile"
+        tools:src="@drawable/asset_3"/>
+
+    <TextView
+        android:id="@+id/chores_completed"
+        android:textColor="@color/black"
+        android:layout_gravity="start"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="12dp"
+        tools:text="Chores Completed: 27"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/current_balance"
+        android:textColor="@color/black"
+        android:layout_gravity="start"
+        android:textSize="20sp"
+        android:layout_marginStart="12dp"
+        tools:text="Current Balance: $350.28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/allowance"
+        android:textColor="@color/black"
+        android:layout_gravity="start"
+        android:textSize="20sp"
+        android:layout_marginStart="12dp"
+        tools:text="Allowance: $10 per week*"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/allowance_disclaimer"
+        android:textColor="@color/black"
+        android:layout_gravity="start"
+        android:textSize="15sp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:text="*Allowance is automatically added to the child's account balance every Sunday."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Space
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/modify_balance"
+        style="@style/Button.Standard"
+        android:text="Modify Balance" />
+
+    <Button
+        android:id="@+id/manage"
+        style="@style/Button.Standard"
+        android:text="Manage Chores" />
+
+    <Button
+        android:id="@+id/allowance_summary"
+        style="@style/Button.Standard"
+        android:layout_marginBottom="8dp"
+        android:text="@string/allowance_summary" />
+</LinearLayout>

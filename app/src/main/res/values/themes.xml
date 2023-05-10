@@ -1,0 +1,32 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Smartsavr" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="Button.Standard" parent="ThemeOverlay.AppCompat">
+        <item name="textAllCaps">false</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_marginHorizontal">12dp</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="EditTextStandard">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginHorizontal">12dp</item>
+        <item name="android:background">@drawable/ic_rounded_edit_text</item>
+        <item name="android:padding">8dp</item>
+    </style>
+</resources>

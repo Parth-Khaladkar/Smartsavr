@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/child_home_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/child_home_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/upcomingChoresChildText"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="start"
+                android:layout_margin="8dp"
+                android:text="Upcoming Chores"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linkSeeGraphs" />
+
+            <TextView
+                android:id="@+id/linkUpcomingActivities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textSize="20sp"
+                android:text="@string/see_more"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentChildUpcomingChores" />
+
+            <TextView
+                android:id="@+id/completedChoresChildText"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="start"
+                android:layout_margin="8dp"
+                android:textStyle="bold"
+                android:text="Completed Chores"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linkUpcomingActivities" />
+
+            <TextView
+                android:id="@+id/linkCompletedActivities"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="20sp"
+                android:text="@string/see_more"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/fragmentChildCompletedChores"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0" />
+
+            <TextView
+                android:id="@+id/earningStatsText"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_gravity="start"
+                android:layout_margin="8dp"
+                android:text="Earning Stats"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentChildUpcomingChores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/upcomingChoresChildText"
+                tools:layout="@layout/fragment_chores_list" />
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/fragmentChildCompletedChores"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/completedChoresChildText"
+                tools:layout="@layout/fragment_chores_list" />
+
+            <ImageView
+                android:id="@+id/wallet_image_view"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="4dp"
+                android:src="@drawable/wallet1"
+                android:visibility="visible"
+                app:layout_constraintDimensionRatio="920:711"
+                app:layout_constraintEnd_toStartOf="@id/textTotal"
+                app:layout_constraintTop_toTopOf="@+id/earningStatsText"
+                app:layout_constraintBottom_toBottomOf="@id/earningStatsText"/>
+
+            <TextView
+                android:id="@+id/textTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/wallet_image_view"
+                tools:text="$30.54" />
+
+            <TextView
+                android:id="@+id/textWeekly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Weekly Earnings: $4.75"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/earningStatsText" />
+
+            <TextView
+                android:id="@+id/textMonthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Monthly Earnings: $35.50"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="8dp"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textWeekly"/>
+
+            <TextView
+                android:id="@+id/linkSeeGraphs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/see_graphs"
+                android:textSize="20sp"
+                android:textColor="@color/blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textMonthly" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

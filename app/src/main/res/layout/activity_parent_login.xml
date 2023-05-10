@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ParentLoginActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/smartsavr"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/EditTextStandard"
+        android:layout_marginTop="10dp"
+        android:inputType="textEmailAddress"
+        android:hint="@string/email_address"
+        android:layout_width="match_parent"/>
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/EditTextStandard"
+        android:layout_marginTop="10dp"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"/>
+
+    <Button
+        android:id="@+id/login"
+        style="@style/Button.Standard"
+        android:layout_marginTop="10dp"
+        android:text="@string/log_in"/>
+
+    <TextView
+        android:id="@+id/resetpassword"
+        android:textColor="@color/black"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="@string/reset_password"
+        android:textSize="23dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/gotosignup"
+        android:textColor="@color/black"
+        android:textSize="23dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/sign_up_small"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".stickers.HomeScreenActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/activityCard"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="4dp"
+        app:strokeColor="#606060"
+        app:strokeWidth="1dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/activityName"
+                android:layout_width="0dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="100dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Wash the dishes Wash the dishes Wash the dishes Wash the dishes Wash the dishes Wash the dishes Wash the dishes Wash the dishes Wash the dishes Wash the dishes Wash the dishes " />
+
+            <TextView
+                android:id="@+id/textDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Done"
+                app:layout_constraintVertical_chainStyle="packed"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="@id/done"
+                app:layout_constraintEnd_toEndOf="@id/done"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/done"
+                tools:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/done"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/check"
+                android:visibility="visible"
+                app:layout_constraintTop_toBottomOf="@id/textDone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/edit"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/edit"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/delete"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/delete"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/delete"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/undo"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/undo"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/taskDone"
+                android:layout_width="27dp"
+                android:layout_height="27dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/check"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/undo"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:visibility="gone" />
+
+            <Space
+                android:id="@+id/reward_space"
+                android:layout_width="8dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/activityName" />
+
+            <TextView
+                android:id="@+id/reward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_reward_background"
+                android:padding="4dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/reward_space"
+                app:layout_constraintTop_toBottomOf="@id/activityName"
+                app:layout_constraintVertical_bias="0"
+                tools:text="$12.00"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/reward"
+                app:layout_constraintTop_toBottomOf="@id/activityName"
+                app:layout_constraintVertical_bias="0"
+                tools:text="Due in 2 hours" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
